@@ -57,6 +57,7 @@
       <!-- RIGHT/BOTTOM ---------------------------------------------------- -->
       <div class="book-container">
         <div id="carouselExampleIndicators" class="carousel slide">
+          <!-- if there are more that 1 slides to display, show nav buttons -->
           <% if (locals[1]) { %>
           <div class="carousel-indicators">
             <button
@@ -93,6 +94,7 @@
             ></button>
           </div>
           <% } %>
+          <!-- 1 carousel item will always show -->
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img
@@ -105,6 +107,7 @@
                 <h4><%= locals[0].author %></h4>
               </div>
             </div>
+            <!-- after /submit path, there will be a total of 5 slides to add to the carousel -->
             <% if (locals[1]) {%>
             <div class="carousel-item">
               <img
@@ -152,6 +155,7 @@
             </div>
             <%} %>
           </div>
+          <!-- if more that 1 slide, show prev/next carousel buttons -->
           <% if (locals[1]) { %>
           <button
             class="carousel-control-prev"
