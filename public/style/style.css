@@ -1,0 +1,304 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url("/images/BookPile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+h1 {
+  font-family: "Satisfy", cursive;
+  font-size: 6rem;
+  text-shadow: 5px 5px 4px black;
+  color: #ffeef4;
+  margin-bottom: 10%;
+}
+
+h2 {
+  text-align: left;
+}
+
+h4 {
+  text-align: right;
+}
+
+h2,
+h3,
+h4 {
+  text-shadow: 2px 2px 9px black;
+}
+
+img {
+  width: 100%;
+}
+
+input {
+  width: 90%;
+  margin-bottom: 5%;
+  font-size: 1.7rem;
+  border: none;
+}
+
+p {
+  margin-top: 2%;
+}
+
+.footer {
+  height: 10vh;
+  background-color: #aec3ae;
+  color: darkslategrey;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.ol-logo {
+  height: 1.5rem;
+}
+
+.main-container {
+  display: flex;
+  height: 90vh;
+  justify-content: space-between;
+  gap: 5%;
+}
+
+.left-or-top-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit {
+  background-color: #94a684;
+  font-weight: bold;
+  color: #ffeef4;
+  box-shadow: 5px 5px 4px black;
+}
+
+.book-container {
+  width: 90%;
+  margin-top: 10%;
+}
+
+/* possible bootstrap mods to make images fit */
+.carousel-inner {
+  height: 0;
+  padding-bottom: 70%; /* this sets carousel aspect ratio (4:1 here) */
+}
+
+.carousel-item {
+  position: absolute !important; /* Bootstrap is insistent */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("/images/Book.jpg");
+  background-position: center;
+  /* background-color: #94a684; */
+}
+
+.carousel-item img {
+  height: 100%; /* Bootstrap handles width already */
+  width: auto;
+  object-fit: cover; /* or 'contain' if you want stretch instead of crop */
+}
+
+/* ANIMATIONS *************************************************************** */
+
+/* Button animate - colour change, change shadow and shrink slightly to get closer to page, transition */
+.submit:hover {
+  background-color: #aec3ae;
+  transition: 0.2s;
+}
+
+.submit:active {
+  box-shadow: 2px 2px 3px black;
+  width: 87%;
+  height: 95%;
+  transition: 0.3s;
+}
+
+/* MEDIA QUERIES ************************************************************ */
+/* Normal orientations - landscape desktop/laptop, portrait tablet/mobile */
+/* First break point 1200px */
+@media (max-width: 1200px) {
+  input {
+    font-size: 1.2rem;
+  }
+  .main-container {
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .left-or-top-container {
+    margin-left: 5%;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .book-container {
+    margin: auto;
+    width: 70%;
+  }
+}
+
+/* Square-ish break point 1000px */
+@media (max-width: 1000px) {
+  .left-or-top-container {
+    flex-direction: column;
+  }
+  .form-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .form-item {
+    width: 33%;
+  }
+  .book-container {
+    margin: auto;
+    width: 80%;
+  }
+}
+
+@media (max-width: 1000px) and (orientation: portrait) {
+  .form-container {
+    flex-direction: column;
+  }
+  .form-item {
+    width: 100%;
+  }
+}
+
+/* Portrait break point 770px */
+@media (max-width: 770px) {
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 5%;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  input {
+    font-size: 0.9rem;
+  }
+  .form-container {
+    flex-direction: column;
+  }
+  .form-item {
+    width: 100%;
+  }
+  .book-container {
+    margin: auto;
+    width: 90%;
+    width: 95%;
+  }
+}
+
+@media (max-width: 770px) and (max-height: 740px) {
+  p {
+    font-size: 0.7rem;
+  }
+  .book-container {
+    width: 80%;
+  }
+}
+
+/* Small phone break point */
+@media (max-width: 420px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 20px;
+  }
+  p {
+    text-align: center;
+  }
+  .main-container {
+    height: 80vh;
+  }
+  .footer {
+    height: 20vh;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+/* Alt orientations - landscape phones and small tablets */
+@media (max-width: 1200px) and (orientation: landscape) {
+  .book-container {
+    width: 65%;
+  }
+}
+
+@media (max-width: 1200px) and (max-height: 800px) and (orientation: landscape) {
+  .book-container {
+    width: 55%;
+  }
+}
+
+@media (max-width: 1200px) and (max-height: 720px) and (orientation: landscape) {
+  .book-container {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+  h2 {
+    font-size: 0.8rem;
+  }
+  h4 {
+    font-size: 0.5rem;
+  }
+  .main-container {
+    flex-direction: row;
+  }
+  .left-or-top-container {
+    flex-direction: column;
+  }
+  .form-container {
+    flex-direction: column;
+  }
+  .form-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 770px) and (orientation: landscape) {
+  h1 {
+    margin-bottom: 5%;
+  }
+  .left-or-top-container {
+    margin-top: 5%;
+    width: 100%;
+  }
+  .book-container {
+    width: 85%;
+  }
+}
+
+@media (max-width: 770px) and (max-height: 420px) and (orientation: landscape) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 0.6rem;
+  }
+  h4 {
+    font-size: 0.4rem;
+  }
+  .footer {
+    height: 15vh;
+  }
+}

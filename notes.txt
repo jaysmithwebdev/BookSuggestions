@@ -1,0 +1,32 @@
+MY NEXT READ
+
+A find my next book app.
+Has search by author
+search by genre
+
+Displays a carousel of book covers with title and author
+
+Images in public/Images
+bookpile for background, book for holding image 
+apply blur to bookpile 
+
+
+
+Desktop width - search stuff on the left side, carousel on the right
+Mobile, search at top, carousel underneath
+Both - title across top
+
+Acheive with flex box - 2 wide when big, stacked when small
+Make the search a vertical flex box
+
+//////////////////////////////////////////////////////////////
+Current to dos 
+
+index.ejs;
+if statements for locals - if deafultsiledata, make one slide,
+if errorslidedata, make one slide 
+if bookstoreccomend, loop through and make slides
+
+catch for initail search - make a render with the error message
+
+
